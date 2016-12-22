@@ -1,0 +1,32 @@
+  <center><h1>Genre Show Page</h1></center>
+  
+
+   	 <p></p>
+
+
+   	 <h3> Genre Name: <%= @genre.name %> </h3>
+
+      <p></p>
+
+       <h3>Genre's Songs:</h3>
+	<ul>
+	  <%@genre.songs.each do |song|%>
+	  <h3><li><a href='/songs/<%=song.slug%>'><%=song.name%></a></li></h3>
+	  <%end%>
+	</ul>
+
+	<p></p>
+
+       <h3>Genre's Artist's:</h3>
+	<ul>
+	  <%@genre.artists.each do |artist|%>
+	  <h3><li><a href='/artists/<%=artist.slug%>'><%=artist.name%></a></li></h3>
+	  <%end%>
+	</ul>
+	<p></p>
+
+  <center><a href='/genres'> Click here to go back to main genre page</a></center>
+
+  <p></p>
+
+  <center><a href='/'> Click here to go back to home page</a></center>

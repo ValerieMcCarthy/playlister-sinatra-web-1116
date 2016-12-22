@@ -1,0 +1,12 @@
+  <center><h1>Genre List Page</h1></center>
+
+   <p></p>
+
+<center><a href='/'> Click here to go back to main page</a></center>
+
+   <ul>
+      <% @genres.each do |genre| %>
+        <li>
+          <a href='/genres/<%=genre.slug%>'><%= genre.name %></a>
+        </li>
+      <% end %>

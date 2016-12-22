@@ -1,0 +1,32 @@
+  <center><h1>Song Show Page</h1></center>
+
+
+
+<% flash.each do |key, value| %>
+ <span style="padding:4px;border-radius: 2px;background:#0497D7 ;color:white" class="<%= key %>"><%= value %></span>
+<% end %>
+
+   	<p></p>
+
+
+   	<h3> Song Name:   <%= @song.name %> </h3>
+   	<h3> Song's Artist: <a href='/artists/<%=@song.artist.slug%>'> <%= @song.artist.name%></a></h3>
+   	<h3>Song's Genres:</h3>
+	<ul>
+	  <%@song.genres.each do |genre|%>
+	  <h3><li><a href='/genres/<%=genre.slug%>'><%=genre.name%></a></li></h3>
+	  <%end%>
+	</ul>
+
+    <p></p>
+
+ <center><a href=<a href='/songs/<%= @song.slug%>/edit>'> Click here to edit a song</a></center>
+
+  <p></p>
+   
+  <center><a href='/songs'> Click here to go back to main song page</a></center>
+
+  <p></p>
+
+  <center><a href='/'> Click here to go back to home page</a></center>
+

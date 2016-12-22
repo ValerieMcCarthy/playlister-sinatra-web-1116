@@ -1,0 +1,12 @@
+  <center><h1>Artist List Page</h1></center>
+
+   <p></p>
+
+<center><a href='/'> Click here to go back to main page</a></center>
+
+   <ul>
+      <% @artists.each do |artist| %>
+        <li>
+          <a href='/artists/<%=artist.slug%>'><%= artist.name %></a>
+        </li>
+      <% end %>

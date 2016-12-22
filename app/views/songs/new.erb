@@ -1,0 +1,27 @@
+<h1>Create a new Song</h1>
+ 
+
+<form action="/songs" method="POST">
+  <p>
+    <label for="Name">New Song Name: <input type="text" id="Name" name="song[name]"></label>
+  </p>
+
+  <p>
+    <label for="Artist Name">Song's Artist Name: <input type="text" id="Artist Name" name="artist[name]"></label>
+  </p>
+
+
+  <p>
+    <h2> Song Genres:</h2>
+    <% @genres.each do |g| %>
+      <label for="<%= g.name %>"> <%= g.name %> </label>
+      <input type="checkbox" id="<%=g.name%>" value="<%=g.id%>" name="genres[]">
+    <% end %>
+  </p>
+
+  <input type="submit" id="Create" value="Create">
+</form>
+Contact GitHub API Training Shop Blog About
+
+
+  
